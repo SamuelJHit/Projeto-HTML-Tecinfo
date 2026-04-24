@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, 'Segoe UI, Roboto, Helvetica Neve', sans-serif;
+    background: #fff4e6;
+    text-decoration: none;
+}
+
+
+
+.box {
+    width: 100px;
+    height: 50px;
+    background: blue;
+    color: white;
+  
+}
+
+.topo{
+    text-align: center;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 7%;
+    width: 100%;
+    background: blue;
+    box-shadow: 0 10px 25px -5px rgba( 0, 0, 0, 0.05), 0 8px 10px -6px rgba( 0, 0, 0, 0.02);
+    z-index: 1000;
+    transition: all 0.2s ease;
+
+}
