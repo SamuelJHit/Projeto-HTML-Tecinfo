@@ -1,32 +1,46 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: system-ui, 'Segoe UI, Roboto, Helvetica Neve', sans-serif;
-    background: #fff4e6;
-    text-decoration: none;
-}
+.icone {
+    position: fixed;
+    top: 0;
+    left: 10%;
+    width: 100%;
+};
 
-
-
-.box {
-    width: 100px;
-    height: 50px;
-    background: blue;
-    color: white;
-  
-}
-
-.topo{
-    text-align: center;
+.topo {
+    text-align: center; //texto alinhamento
     color: white;
     position: fixed;
     top: 0;
     left: 7%;
     width: 100%;
-    background: blue;
+    background-color: blue;
     box-shadow: 0 10px 25px -5px rgba( 0, 0, 0, 0.05), 0 8px 10px -6px rgba( 0, 0, 0, 0.02);
     z-index: 1000;
     transition: all 0.2s ease;
+}
 
+.posicaoC{
+    width: 350;
+    height: 47;
+    top: 25px;
+    left: 508px;
+    opacity: 1;
+
+} //posicionando o principal dela
+
+.cabecalhobaseII {
+    display: flex;
+    position: absolute;
+    line-height: 21px;
+    gap: 20px; 
+    width: 345px;
+    height: 21px;
+    top: 25px;
+    left: 513px;
+    opacity: 1;
+    margin: 0;
+    padding: 0;
+} //alinhamento do quadro.
+
+.iconecor {
+    color: #E8590C
 }
