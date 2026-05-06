@@ -7,6 +7,7 @@
 };
 
 .container{
+    display: flex;
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 24px;
@@ -18,9 +19,8 @@
     color: white;
     position: fixed;
     top: 0;
-    left: 7%;
+    left: 0%;
     width: 100%;
-    background-color: blue;
     box-shadow: 0 10px 25px -5px rgba( 0, 0, 0, 0.05), 0 8px 10px -6px rgba( 0, 0, 0, 0.02);
     z-index: 1000;
     transition: all 0.2s ease;
@@ -31,9 +31,9 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 1rem 0;
+    padding: 1rem;
     gap: 1rem;
-    background-color: black;
+    background-color: rgb(241, 219, 185);
 }
 
 .cabecalhobaseII {
@@ -47,7 +47,17 @@
     padding: 0;
 }
 
+.body {
+    padding: 0 10px
+}
 
+.button {
+    border-radius: 2px;
+    color: #E8590C;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
 
 .iconecor {
     color: #E8590C
