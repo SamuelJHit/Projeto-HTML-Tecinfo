@@ -13,7 +13,7 @@
     background: blue;
     color: white;
     text-align: center;
-    z-index: 1;
+
   
 }
 
@@ -27,7 +27,7 @@
     height: 50px;
     background: blue;
     box-shadow: 0 10px 25px -5px rgba( 0, 0, 0, 0.05), 0 8px 10px -6px rgba( 0, 0, 0, 0.02);
-    z-index: 2;
+
     /*z-index: 1000;
      transition: all 0.2s ease; */
 
@@ -42,7 +42,7 @@
     width: 1000px;
     align-items: center;
     flex-direction: column;
-    z-index: 3;
+
     
     
 }
@@ -57,7 +57,7 @@
 }
 
 .boxLogin {
-    z-index: 4;
+
     transform: translate( 16%, 0%);
     background: white;;
     text-align: center;
