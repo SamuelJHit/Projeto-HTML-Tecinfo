@@ -44,3 +44,81 @@
 .iconecor {
     color: #E8590C
 }
+
+
+PainelGeren:
+CSS:
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, 'Segoe UI, Roboto, Helvetica Neve', sans-serif;
+    background: #4fd1d1;
+    text-decoration: none;
+}
+
+.box {
+    width: 100px;
+    height: 50px;
+    background: blue;
+    color: white;
+    text-align: center;
+
+}
+
+.topo{
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 7.3%;
+    width: 100%;
+    height: 50px;
+    background: blue;
+    box-shadow: 0 10px 25px -5px rgba( 0, 0, 0, 0.05), 0 8px 10px -6px rgba( 0, 0, 0, 0.02);
+
+    /*z-index: 1000;
+     transition: all 0.2s ease; */
+
+}
+.backgroundII {
+    align-items: center;
+    background: yellow;
+    height: 1000px;
+    width: 1000px;
+
+}
+
+.body {
+    width: 300px;
+    padding: 0;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(189, 226, 228);
+}
+
+.text {
+    background: white;
+}
+
+.buttonI {
+    transform: translate( 1190%);
+    
+}
+
+.boxLogin {
+    
+    transform: translate( 16%, 0%);
+    background: white;;
+    text-align: center;
+    position: absulute;
+    width: 290px;
+    height: 290px;
+    border: 2.7px solid;
+    border-radius: 12%;
+    border-color: rgb(188, 210, 214);
+
+}

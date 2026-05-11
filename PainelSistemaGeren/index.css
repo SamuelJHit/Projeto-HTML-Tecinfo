@@ -14,7 +14,6 @@
     color: white;
     text-align: center;
 
-  
 }
 
 .topo{
@@ -23,7 +22,7 @@
     position: absolute;
     top: 0;
     left: 7.3%;
-    width: 100%;
+    width: 1265.9px;
     height: 50px;
     background: blue;
     box-shadow: 0 10px 25px -5px rgba( 0, 0, 0, 0.05), 0 8px 10px -6px rgba( 0, 0, 0, 0.02);
@@ -32,23 +31,34 @@
      transition: all 0.2s ease; */
 
 }
+.backgroundII {
+    align-items: center;
+    background: yellow;
+    height: 1000px;
+    width: 1000px;
+
+}
+
+.backgroundColor {
+    background-color: white;
+}
 
 
 .body {
-    background: yellow;
     display: flex;
-    margin: 0;
-    height: 0;
-    width: 1000px;
-    align-items: center;
     flex-direction: column;
-
-    
-    
+    width: 1000px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(189, 226, 228);
 }
 
-.text {
-    background: white;
+.barra {
+    position: absolute;
+    height: 1000px;
+    width: 100px;
+    opacity: 1;
+
 }
 
 .buttonI {
@@ -57,12 +67,13 @@
 }
 
 .boxLogin {
-
+    z-index: 1;
     transform: translate( 16%, 0%);
-    background: white;;
+    background: white;
     text-align: center;
-    width: 230px;
-    height: 190px;
+    position: absulute;
+    width: 290px;
+    height: 290px;
     border: 2.7px solid;
     border-radius: 12%;
     border-color: rgb(188, 210, 214);
