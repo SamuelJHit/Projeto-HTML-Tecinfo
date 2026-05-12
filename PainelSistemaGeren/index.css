@@ -45,13 +45,17 @@
     background-color: white;
 }
 
+.containerII {
+    z-index: 1;
+}
 
 .body {
+    padding: 0;
     display: flex;
     flex-direction: column;
-    width: 1000px;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
     background-color: rgb(211, 238, 240);
 }
 
@@ -70,13 +74,10 @@
 }
 
 .boxLogin {
-    position: relative;
-    z-index: 1;
-    justify-content: start;
     transform: translate( 16%, 0%);
     background: white;
     text-align: center;
-    position: absulute;
+    position: absolute;
     width: 290px;
     height: 290px;
     border: 2.7px solid;
