@@ -65,7 +65,7 @@
     color: blue;
 
     border: none;
-    border: 8px;
+    border-radius: 8px;
 
     padding: 10px 20px;
     cursor: pointer;
