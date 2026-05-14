@@ -1,3 +1,30 @@
+/*reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, 'Segoe UI', Roboto, Helvetica, sans-serif;
+}
+/* Body */
+
+.body {
+    min-width: 10vh;
+    background-color: #FFF4E6;
+}
+
+.button-Agenda {
+    color: #E8590C;
+
+    border: none;
+    border-radius: 8px;
+    
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Cabeçalho */
+
 .icone {
     position: fixed;
     top: 0;
@@ -14,26 +41,31 @@
 
 }
 
-.topo {
-    text-align: center;
-    color: white;
-    position: fixed;
-    top: 0;
-    left: 0%;
-    width: 100%;
-    box-shadow: 0 10px 25px -5px rgba( 0, 0, 0, 0.05), 0 8px 10px -6px rgba( 0, 0, 0, 0.02);
-    z-index: 1000;
-    transition: all 0.2s ease;
-}
-
-.posicaoC{
+.menu-itens {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 1rem;
-    gap: 1rem;
-    background-color: rgb(241, 219, 185);
+    width: 350px;
+    height: 47px;
+}
+
+.container-head {
+    text-align: center;
+    background-color: #FFF4E6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1366px;
+    height: 72px;
+    padding: 15px 30px;
+    box-shadow: 0 10px 25px -5px rgba( 0, 0, 0, 0.05), 0 8px 10px -6px rgba( 0, 0, 0, 0.02);
+}
+
+.posicaoC{
+    position: relative;
+    width: 250px;
+    height: 50px;
+    text-align: center;
 }
 
 .cabecalhobaseII {
@@ -47,19 +79,7 @@
     padding: 0;
 }
 
-.body {
-    padding: 0 10px
-}
 
-.button {
-    border: 1.8px solid;
-    border-radius: 12px;
-    padding: 0px 9px;
-    color: #E8590C;
-    text-align: center;
-    display: inline-block;
-    cursor: pointer;
-}
 
 .iconecor {
     color: #E8590C
