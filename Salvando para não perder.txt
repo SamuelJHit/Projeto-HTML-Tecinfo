@@ -47,17 +47,82 @@
 
 
 PainelGeren:
+HTML:
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+
+    <div>
+        <header class="container-head">
+            <div class="box">
+                <h3>TecInfo</h3>
+            </div>
+
+            <h2 class="titulo">Painel de Gerenciamento</h2>
+
+            <button class="btn-agenda">Agenda consulta</button>
+            
+            
+        </header>
+        
+    </div>
+        
+    <main class="main-content">
+        
+            <h3 class="welcome-text">Seja bem vindo ADM!</h3>
+
+        <section class="boxLogin">
+            <div class="input-group">
+
+                <label>Login:</label>
+
+                <input type="text" placeholder="Digite seu email">
+    
+                <label>Senha:</label>
+    
+                <input type="password" placeholder="Digite sua senha">
+            
+            </div>
+
+            <button class="buttonI">Entrar</button>
+        </section>
+        <p class="footer-text">Qualquer bacana, diz aí</p>
+    </main>
+    
+
+    
+</body>
+</html>
+
+
 CSS:
+/* reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: system-ui, 'Segoe UI, Roboto, Helvetica Neve', sans-serif;
-    background: #4fd1d1;
-    text-decoration: none;
+}
+/* body */
+
+.body {
+    font-family: Arial, sans-serif;
+    min-width: 10vh;
+    background-color: rgb(211, 238, 240);
 }
 
+
 .box {
+    position: relative;
     width: 100px;
     height: 50px;
     background: blue;
@@ -65,14 +130,26 @@ CSS:
     text-align: center;
 
 }
+/* cabeçalho */
+
+.container-head {
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
 .topo{
+    position: relative;
     text-align: center;
     color: white;
     position: absolute;
     top: 0;
     left: 7.3%;
-    width: 100%;
+    width: 1265.9px;
     height: 50px;
     background: blue;
     box-shadow: 0 10px 25px -5px rgba( 0, 0, 0, 0.05), 0 8px 10px -6px rgba( 0, 0, 0, 0.02);
@@ -81,44 +158,98 @@ CSS:
      transition: all 0.2s ease; */
 
 }
-.backgroundII {
-    align-items: center;
-    background: yellow;
-    height: 1000px;
-    width: 1000px;
-
+.logo h3{
+    font-size: 24px;
 }
 
-.body {
-    width: 300px;
-    padding: 0;
-    margin: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: rgb(189, 226, 228);
+.titulo {
+    font-size: 28px;
 }
 
-.text {
-    background: white;
+.btn-agenda {
+    background-color: white;
+    color: blue;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .buttonI {
-    transform: translate( 1190%);
+    background-color: blue;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+
+    cursor: pointer;
+    transition: 0.3s;
     
 }
 
-.boxLogin {
-    
-    transform: translate( 16%, 0%);
-    background: white;;
-    text-align: center;
-    position: absulute;
-    width: 290px;
-    height: 290px;
-    border: 2.7px solid;
-    border-radius: 12%;
-    border-color: rgb(188, 210, 214);
+.btnI:hover {
+    background-color: #dbe9ff;
+}
 
+/*main */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+
+}
+
+.welcome-text {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.footer-text{
+    margin-top: 20px;
+    background-color: rgb(189, 226, 228);
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+
+/* box login */
+.boxLogin {
+    background: white;
+    
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+/* input group */
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input{
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
 }
