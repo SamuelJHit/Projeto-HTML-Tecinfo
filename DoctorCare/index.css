@@ -5,23 +5,6 @@
     box-sizing: border-box;
     font-family: system-ui, 'Segoe UI', Roboto, Helvetica, sans-serif;
 }
-/* Body */
-
-.body {
-    min-width: 10vh;
-    background-color: #FFF4E6;
-}
-
-.button-Agenda {
-    color: #E8590C;
-
-    border: none;
-    border-radius: 8px;
-    
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
 
 /* Cabeçalho */
 
@@ -42,6 +25,7 @@
 }
 
 .menu-itens {
+    color: #E8590C;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -79,8 +63,45 @@
     padding: 0;
 }
 
-
+.welcome-textII{
+    font-size: 15px;
+}
 
 .iconecor {
     color: #E8590C
+}
+
+/* Body */
+
+.body {
+    min-width: 10vh;
+    background-color: #FFF4E6;
+}
+
+.button-Agenda {
+    color: #E8590C;
+    background-color: #ffecd3;
+
+    border: none;
+    border-radius: 8px;
+    
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* main */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.welcome-text {
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-family: sans-serif ;
 }
