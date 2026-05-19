@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>document</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="javasheet" href="index.js">
 
 </head>
 <body>
@@ -26,7 +27,8 @@
     </div>
         
     <main class="main-content">
-        
+        <script src="index.js"></script>
+
             <h3 class="welcome-text">Seja bem vindo ADM!</h3>
 
         <section class="boxLogin">
@@ -34,15 +36,15 @@
 
                 <label>Login:</label>
 
-                <input type="text" placeholder="Digite seu email">
+                <input type="text" id="login" placeholder="Digite seu email">
     
                 <label>Senha:</label>
     
-                <input type="password" placeholder="Digite sua senha">
+                <input type="password" id="senha" placeholder="Digite sua senha">
             
             </div>
 
-            <button class="buttonI">Entrar</button>
+            <button class="buttonI" onclick="entrar()"> Entrar</button>
         </section>
         <p class="footer-text">Qualquer bacana, diz aí</p>
     </main>
