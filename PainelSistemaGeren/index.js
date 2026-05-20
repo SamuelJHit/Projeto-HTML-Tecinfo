@@ -8,4 +8,6 @@ function entrar() {
         alert ("Login realizado!")
         window.location.href = "pagina.html";
     }
+
+    localStorage.setItem("login", login);
 }
