@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="pagina.css">
+    <link rel="stylesheet" href="index.js">
     <title>Document</title>
 </head>
 <body>
@@ -11,7 +12,7 @@
     <div>
         <header class="container-headP">
             <div class="boxP">
-                <h3 class="logo">TecInfo</h3>
+                <h3>TecInfo</h3>
             </div>
 
             <h2 class="tituloP">Painel de Gerenciamento</h2>
@@ -19,9 +20,18 @@
             <button class="btn-agenda">Agenda consulta</button>
         </header>
     </div>
-    
+
     <main class="main-contentP">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHWEp8Py72kRY3CV5mlFQQPSmc2DBVAQQLWw&s" alt="">
+
+            <h1 id="mensagem"></h1>
+
+        <script>
+            let login = localStorage.getItem("login");
+
+            document.getElementById("mensagem").innerText = `Seja bem vindo! ${login}`
+        </script>
+
+
     </main>
     
 </body>
