@@ -85,8 +85,12 @@
     
 }
 
-.btnI:hover {
+.btn-agenda:hover {
     background-color: #dbe9ff;
+}
+
+.buttonI:hover {
+    background-color: rgb(5, 5, 161);
 }
 
 /*main */
