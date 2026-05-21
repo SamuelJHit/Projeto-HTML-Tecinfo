@@ -26,6 +26,24 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+.container-headDB {
+    background-color: blue;
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 15px 30px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.boxDB {
+    width: 100px;
+    height: 50px;
+    background: blue;
+    color: white;
+
+}
+
 .boxP {
     position: relative;
     width: 100px;
@@ -35,12 +53,18 @@
     text-align: center;
 }
 
-.logo h3{
+.logoP h3{
     font-size: 24px;
 }
 
 .tituloP {
     font-size: 28px;
+}
+
+.tituloDB {
+    font-size: 28px;
+    position: absolute;
+    left: 38%;
 }
 
 .btn-agendaP {
@@ -51,8 +75,13 @@
     border-radius: 8px;
 
     padding: 10px 20px;
+
     cursor: pointer;
     transition: 0.3s;
+}
+
+.btn-agendaP:hover {
+    background-color: #dbe9ff;
 }
 /* main */
 
