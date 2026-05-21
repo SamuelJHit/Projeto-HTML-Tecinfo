@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="pagina.css">
-    <link rel="stylesheet" href="index.js">
+    <script src="index.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -17,7 +17,7 @@
 
             <h2 class="tituloP">Painel de Gerenciamento</h2>
 
-            <button class="btn-agenda">Agenda consulta</button>
+            <button class="btn-agendaP" onclick="dashboard()">Agenda consulta</button>
         </header>
     </div>
 
@@ -28,7 +28,7 @@
         <script>
             let login = localStorage.getItem("login");
 
-            document.getElementById("mensagem").innerText = `Seja bem vindo! ${login}`
+            document.getElementById("mensagem").innerText = `Seja bem vindo! ${login}`;
         </script>
 
 
