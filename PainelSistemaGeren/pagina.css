@@ -41,7 +41,6 @@
     height: 50px;
     background: blue;
     color: white;
-
 }
 
 .boxP {
@@ -102,8 +101,7 @@
     display: block;
     padding: 10px 0;
     color: black;
-    text-decoration: none;
-        
+    text-decoration: none;       
 }
 
 .status {
