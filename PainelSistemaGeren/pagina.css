@@ -83,20 +83,18 @@
 .btn-agendaP:hover {
     background-color: #dbe9ff;
 }
-/* main */
+
+/* sidebear */
 
 .sidebear {
     background: white;
     width: 250px;
-    height: 400px;
-    max-width: 300px;
+    height: 540px;
+    max-height: 550px;
     padding: 20px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 
     display: flex;
-    position: absolute;
-    z-index: 1;
-    flex-direction: column;
     gap: 20px;
 }
 
@@ -104,13 +102,53 @@
     display: block;
     padding: 10px 0;
     color: black;
+    text-decoration: none;
         
+}
+
+.status {
+    position: fixed;
+    bottom: 20px;
+    width: 120px;
+    max-width: 300px;
+    padding: 10px 20px;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: rgb(236, 236, 236);
+    cursor: pointer;
+
+    display: flex;
+    gap: 20px;
+}
+
+/* main */
+
+.container-center{
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 10px;
+}
+
+.feed_log {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 120px;
+    max-width: 300px;
+    padding: 10px 20px;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: rgb(236, 236, 236);
+    cursor: pointer;
+    display: flex;
+    overflow: hidden;
 }
 
 .card {
     background: white;
     
-    width: 1300px;
+    width: 1000px;
     max-width: 820px;
     padding: 10px;
     
@@ -119,7 +157,6 @@
     border-color: rgb(236, 236, 236);
 
     display: flex;
-    flex-direction: column;
     gap: 20px;
 }
 
@@ -130,11 +167,8 @@
 }
 
 .main-contentP {
-    position: relative;
-    z-index: 2;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 40px 20px;
+    gap: 19px;
 }
