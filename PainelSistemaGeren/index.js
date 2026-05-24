@@ -56,3 +56,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+
+/* Painel Feed */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const btnFeed =
+        document.getElementById("btnFeed");
+
+    const painelFeed =
+        document.getElementById("feedDropdown");
+
+    /* ABRIR FECHAR */
+
+    btnFeed.addEventListener("click", (event) => {
+
+        event.stopPropagation();
+
+        painelFeed.classList.toggle("ativo");
+    });
+
+    /* FECHAR AO CLICAR FORA */
+
+    document.addEventListener("click", () => {
+
+        painelFeed.classList.remove("ativo");
+    });
+
+    /* IMPEDIR FECHAR AO CLICAR DENTRO */
+
+    painelFeed.addEventListener("click", (event) => {
+
+        event.stopPropagation();
+    });
+
+});
