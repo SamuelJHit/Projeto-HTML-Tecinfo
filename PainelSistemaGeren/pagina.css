@@ -227,9 +227,7 @@
     gap: 20px;
 }
 
-/* =========================
-   Feed Painel
-========================= */
+/* Feed Painel */
 
 .feed-wrapper{
     position: fixed;
@@ -247,8 +245,9 @@
 
     padding: 14px;
 
-    border: none;
-    border-radius: 10px;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: rgb(236, 236, 236);
 
     background-color: white;
 
@@ -277,7 +276,7 @@
 
     background-color: white;
 
-    border-radius: 15px;
+    border-radius: 5px;
 
     padding: 15px;
 
