@@ -25,3 +25,34 @@ function dashboard() {
         window.location.href = "dashboard.html";
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const btnStatus = document.getElementById("btnStatus");
+
+    const painel = document.getElementById("statusDropdown")
+
+    /* Ao abrir */
+
+    btnStatus.addEventListener("click", (event) => {
+
+        event.stopPropagation();
+
+        painel.classList.toggle("ativo");
+    });
+
+    /* Ao fechar */
+
+    document.addEventListener("click", () => {
+
+        painel.classList.remove("ativo");
+    });
+
+    /* ao impedir fechar ao clicar dentro */
+
+    painel.addEventListener("click", () => {
+
+        event.stopPropagation();
+    });
+
+});
+
