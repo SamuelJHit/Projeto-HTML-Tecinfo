@@ -68,13 +68,25 @@
     text-decoration: none;       
 }
 
+.sidebearDB-Right{
+    background: white;
+    width: 250px;
+    height: 540px;
+    max-height: 550px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+    display: flex;
+    gap: 20px;
+}
+
 /* main */
 
 .container-centerDB{
     display: flex;
     align-items: flex-start;
+    justify-content: space-start;
     gap: 30px;
-    padding: 10px;
 }
 
 
@@ -96,7 +108,7 @@
     background: white;
     
     width: 1000px;
-    max-width: 820px;
+    max-width: 650px;
     padding: 10px;
     
     border: 2px solid;
@@ -106,6 +118,8 @@
     display: flex;
     gap: 20px;
 }
+
+
 
 .main-contentDB {
     display: flex;
