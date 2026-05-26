@@ -40,6 +40,39 @@
 
             <div class="blocoDB">
                 <p class="cardDB">Calandario</p>
+                <div class ="calendario-grid">
+                    <div class="dia" data-status="completo">1</div>
+                    <div class="dia" data-status="incompleto">2</div>
+                    <div class="dia" data-status="completo">3</div>
+                    <div class="dia" data-status="incompleto">4</div>
+                    <div class="dia" data-status="incompleto">5</div>
+                    <div class="dia" data-status="completo">6</div>
+                    <div class="dia" data-status="completo">7</div>
+                    <div class="dia" data-status="incompleto">8</div>
+                    <div class="dia" data-status="completo">9</div>
+                    <div class="dia" data-status="incompleto">10</div>
+                    <div class="dia" data-status="completo">11</div>
+                    <div class="dia" data-status="incompleto">12</div>
+                    <div class="dia" data-status="completo">13</div>
+                    <div class="dia" data-status="incompleto">14</div>
+                    <div class="dia" data-status="completo">15</div>
+                    <div class="dia" data-status="completo">16</div>
+                    <div class="dia" data-status="incompleto">17</div>
+                    <div class="dia" data-status="incompleto">18</div>
+                    <div class="dia" data-status="completo">19</div>
+                    <div class="dia" data-status="completo">20</div>
+                    <div class="dia" data-status="incompleto">21</div>
+                    <div class="dia" data-status="completo">22</div>
+                    <div class="dia" data-status="incompleto">23</div>
+                    <div class="dia" data-status="completo">24</div>
+                    <div class="dia" data-status="incompleto">25</div>
+                    <div class="dia" data-status="completo">26</div>
+                    <div class="dia" data-status="incompleto">27</div>
+                    <div class="dia" data-status="completo">28</div>
+                    <div class="dia" data-status="incompleto">29</div>
+                    <div class="dia" data-status="incompleto">30</div>
+
+                </div>
             </div>
 
             <script>
@@ -52,11 +85,45 @@
 
             <div class="sidebearDB-Right">
                 <p>Grafico será aqui dentro</p>
-
-                <h1 class="graficoI">A</h1>
+                <div class="grafico">
+                    <p class="titulo-grafico">Status do Dia</p>
+                    <div id="graficoDashboard" class="graficoI completo">
+                        <div class="centro-grafico">
+                        </div>
+                    </div>
+                </div>
             </div> 
 
         
     </div>
 </body>
+
+<script>
+    // Seleciona todos os dias e os elementos do gráfico
+    const dias = document.querySelectorAll('.dia');
+    const grafico = document.getElementById('graficoDashboard');
+    const textoStatus = document.getElementById('texto-status');
+
+    dias.forEach(dia => {
+        dia.addEventListener('click', () => {
+            // 1. Remove o destaque do dia anterior e adiciona no dia clicado
+            dias.forEach(d => d.classList.remove('selecionado'));
+            dia.classList.add('selecionado');
+
+            // 2. Pega o status do dia clicado (completo ou incompleto)
+            const status = dia.getAttribute('data-status');
+
+            // 3. Atualiza o gráfico com base no status
+            if (status === 'completo') {
+                grafico.className = 'grafico-circular completo';
+                textoStatus.innerText = '100%';
+                textoStatus.style.color = '#28a745';
+            } else {
+                grafico.className = 'grafico-circular incompleto';
+                textoStatus.innerText = '50%';
+                textoStatus.style.color = '#dc3545';
+            }
+        });
+    });
+</script>
 </html>
