@@ -1,0 +1,143 @@
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* body */
+
+.bodyDB {
+    font-family: Arial, sans-serif;
+    min-width: 10vh;
+    background-color: rgb(224, 245, 247) ;
+}
+
+
+/* cabeçalho */
+
+.container-headDB {
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.boxDB {
+    width: 100px;
+    height: 50px;
+    background: blue;
+    color: white;
+}
+
+.logoDB h3{
+    font-size: 24px;
+}
+
+.titulo {
+    font-size: 28px;
+}
+
+.tituloDB {
+    font-size: 28px;
+    position: absolute;
+    left: 38%;
+}
+
+/* sidebear */
+
+.sidebearDB {
+    background: white;
+    width: 250px;
+    height: 540px;
+    max-height: 550px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+    display: flex;
+    gap: 20px;
+}
+
+.sidebearDB nav a{
+    display: block;
+    padding: 10px 0;
+    color: black;
+    text-decoration: none;       
+}
+
+.sidebearDB-Right{
+    background: white;
+    width: 300px;
+    height: 540px;
+    max-height: 550px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    
+    display: flex;
+    gap: 20px;
+}
+
+/* grafico */
+
+.graficoI{
+    display: flex;
+    position: relative;
+    bottom: -200px;
+    background-color: green;
+    width: 300px;
+    height: 150px;
+    border-radius: 100px;
+    padding: 50px;
+    margin: 20px;
+}
+
+/* main */
+
+.container-centerDB{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+
+.blocoDB{
+    background: white;
+    
+    width: 100%;
+    max-width: 900px;
+    padding: 40px 10px;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cardDB {
+    background: white;
+    
+    width: 1000px;
+    max-width: 650px;
+    padding: 10px;
+    
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: rgb(236, 236, 236);
+
+    display: flex;
+    gap: 20px;
+}
+
+
+
+.main-contentDB {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 19px;
+}
