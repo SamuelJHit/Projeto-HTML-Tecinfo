@@ -70,14 +70,28 @@
 
 .sidebearDB-Right{
     background: white;
-    width: 250px;
+    width: 300px;
     height: 540px;
     max-height: 550px;
     padding: 20px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-
+    
     display: flex;
     gap: 20px;
+}
+
+/* grafico */
+
+.graficoI{
+    display: flex;
+    position: relative;
+    bottom: -200px;
+    background-color: green;
+    width: 300px;
+    height: 150px;
+    border-radius: 100px;
+    padding: 50px;
+    margin: 20px;
 }
 
 /* main */
@@ -85,7 +99,7 @@
 .container-centerDB{
     display: flex;
     align-items: flex-start;
-    justify-content: space-start;
+    justify-content: space-between;
     gap: 30px;
 }
 
