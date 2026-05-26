@@ -82,16 +82,85 @@
 
 /* grafico */
 
-.graficoI{
+.titulo-calendario {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+.calendario-grid {
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: rgb(236, 236, 236);
+
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+.dia{
+    font-family: sans-serif;
     display: flex;
-    position: relative;
-    bottom: -200px;
-    background-color: green;
-    width: 300px;
-    height: 150px;
-    border-radius: 100px;
-    padding: 50px;
-    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.dia:hover{
+    background-color: #007bff;
+    color:white;
+}
+
+.container-grafico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+/* o grafico circular */
+.grafico-circular {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%; /* Faz ficar redondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.4s ease; /* Transição suave de cor */
+}
+
+.grafico-circular.completo {
+    background: #28a745;
+}
+
+.grafico-circular.incompleto {
+    /* O conic-gradient faz o desenho estilo pizza: verde de 0% a 50%, vermelho de 50% a 100% */
+    background: conic-gradient(#28a745 0% 50%, #dc3545 50% 100%);
+}
+
+.centro-grafico{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+.dia.selecionado {
+    background-color: #007bff !important;
+    color: white;
 }
 
 /* main */
