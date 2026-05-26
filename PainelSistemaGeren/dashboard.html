@@ -24,27 +24,23 @@
     
 
     <div class="container-centerDB">
+        
+
             <aside class="sidebearDB">
                 <nav>
                     <a href="#">Lista de Clientes</a>
                     <a href="#">Ações de ADM</a>
                     <a href="#">Novo Cliente</a>
                 </nav>
-                
             </aside>
 
-        <main class="main-contentDB">
-            
+            <main class="main-contentDB">
 
                 <h1 id="mensagem"></h1>
 
             <div class="blocoDB">
                 <p class="cardDB">Calandario</p>
             </div>
-            
-            <div class="sidebearDB-Right">
-                <p>Grafico será aqui dentro</p>
-            </div>      
 
             <script>
                 let login = localStorage.getItem("login");
@@ -52,8 +48,15 @@
                 document.getElementById("mensagem").innerText = `Dentro da consulta dashboard ${login}`;
             </script>
 
-
         </main>
+
+            <div class="sidebearDB-Right">
+                <p>Grafico será aqui dentro</p>
+
+                <h1 class="graficoI">A</h1>
+            </div> 
+
+        
     </div>
 </body>
 </html>
