@@ -14,6 +14,33 @@
     background-color: rgb(224, 245, 247);
 }
 
+footer {
+    background-color: #222; 
+    color: #fff; 
+    padding: 40px 0; 
+    text-align: center; 
+    margin-top: auto;
+}
+
+.container-rodape {
+    display: flex; /* Alinha os blocos lado a lado */
+    justify-content: space-around;
+    flex-wrap: wrap; /* Quebra a linha em telas menores */
+    max-width: 1200px;
+    margin: 0 auto;
+    bottom: 10px;
+}
+
+footer a {
+    color: #00bcd4; /* Cor dos links */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+
+}
+
 
 .box {
     position: relative;
