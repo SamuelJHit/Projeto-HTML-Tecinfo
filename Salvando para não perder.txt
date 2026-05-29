@@ -253,3 +253,175 @@ CSS:
     border-radius: 8px;
     outline: none;
 }
+
+
+Atiivdade:
+<article>
+  <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu card</title>
+    <link rel="stylesheet" href="card.css">
+</head>
+<body class="body-perfil">
+    <main class="main-content-perfil">
+        <div class="box-card">
+            <h3 class="card-nome">Samuel Justino Araújo</h3>
+            <p class="card-subtitulo">Trabalho em casa 👍</p>
+            
+            
+            <h4 class="card-info-tech">Programming languages I use</h4>
+            
+            <section class="container">
+                <span class="badge cor-h">HTML</span>
+                <span class="badge cor-c">CSS</span>
+                <span class="badge cor-j">JavaScript</span>
+            </section>
+            
+            <section class="social-container">
+                <h4>Social Links</h4>
+                <a href="https://github.com/SamuelJHit" target="_blank" class="social-link">
+                    <img src="logotipo-do-github.png" width="40" height="40" alt="GitHub do Samuel" class="social-icon">
+                </a>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
+</article>
+
+<style>
+  article {
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, 'Segoe UI, Roboto, Helvetica Neve', sans-serif;
+}
+
+.body-perfil {
+    font-family: Arial, sans-serif;
+    min-width: 100vh;
+    background-color: rgb(224, 245, 247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content-perfil {
+    display: flex;
+    width: 100%;
+    padding: 20%;
+    justify-content: center;
+}
+
+.box-card{
+    background-color: white;
+    top: 120px;
+    width: 100%;
+    left: 480px;
+    max-width: 400px;
+    padding: 35px 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.8);
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    text-align: center;
+}
+
+.card-nome{
+    font-size: 24px;
+    color: #1a202c;
+    font-weight: 700;
+}
+
+.article h3{
+  max-width: 16rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: #fefefe;
+  box-shadow: 2px 4px rgba(0,0,0,0.1);
+}
+
+.card-subtitulo {
+    font-size: 15px;
+    color: #4a5568;
+    background-color: #edf2f7;
+    padding: 6px 12px;
+    border-radius: 20px;
+    align-self: center;
+    font-weight: 500;
+}
+
+.card-info-tech{
+    font-size: 14px;
+    color: #718096;
+    margin-top: 5px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.badge {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+
+}
+
+.badge:hover {
+    transform: translateY(-2px);
+}
+
+.social-container {
+    border-radius: 999px;
+    background: #f3f4f6;
+    transition: background 0.2s;
+    align-items: center;
+    gap: 0.4 rem;
+}
+
+.social-container:hover {
+  background: #e5e7eb;
+}
+    
+.cor-h{
+    background-color: #ff4500;
+    color: rgb(255, 209, 191);
+    height: 40px;
+    width: 60px;
+    display: flex;
+}
+
+.cor-c{
+    background-color: blue;
+    color: rgb(159, 206, 206);
+    height: 40px;
+    width: 60px;
+    display: flex;
+}
+
+.cor-j{
+    background-color: rgb(223, 200, 0);
+    color: rgb(255, 252, 226);
+    height: 40px;
+    width: 80px;
+    display: flex;
+}
+  }
+</style>
