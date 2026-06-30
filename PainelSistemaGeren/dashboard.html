@@ -79,6 +79,45 @@
                     let login = localStorage.getItem("login");
 
                     document.getElementById("mensagem").innerText = `Dentro da consulta dashboard ${login}`;
+
+                    function atualizarGrafico(){
+                        const dias = document.querySelectorAll('.dia');
+                        const totalDias = dias.length;
+                        let diasCompletos = 0;
+
+                        dias.forEach(dia => {
+                            if(dia.getAttribute('data-status') === 'completo'){
+                                diasCompletos++;
+                                dia.style.borderLeft = "4x solid #28a745";
+                            } else {
+                                dia.style.borderLeft = "4x solid #dc3545"
+                            }
+                        });
+                        const porcentagem = Math.round((diasCompletos / totalDias) * 100);
+                        const grafico = document.getElementById('graficoDashboard');
+                        const centro = document.getElementById('centroGrafico');
+
+                        if (porcentagem === 100) {
+                            grafico.style.background = '#28a745';
+                            centro.innerText = "100%";
+                        } else if (porcentagem === 0){
+                            grafico.style.background = '#dc3545';
+                            centro.innerText = "";
+                        } else {
+                            grafico.style.background = `conic-gradient(#28a745 0% ${porcentagem}%, #dc3545 ${porcentagem}% 100%)`;
+                            centro.innerText = `${porcentagem}%`;
+                        }
+                    }
+
+                    window.onload = atualizarGrafico;
+
+                    document.querySelector('.dia').forEach(dia => {
+                        dia.addEventListener('click', () => {
+                            const statusAtual = dia.getAttribute('data-status');
+                            dia.setAttribute('data-status', statusAtual === 'completo' ? 'incompleto' : 'completo');
+                            atualizarGrafico();
+                        });
+                    });
                 </script>
 
             </main>
