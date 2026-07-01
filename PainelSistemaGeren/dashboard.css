@@ -1,16 +1,15 @@
 /* reset */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* body */
 
+/* body */
 .bodyDB {
     font-family: Arial, sans-serif;
-    min-width: 100vh;
-    background-color: rgb(224, 245, 247) ;
+    min-height: 100vh; /* Corrigido de min-width para min-height */
+    background-color: rgb(224, 245, 247);
     display: flex;
     flex-direction: column;
 }
@@ -24,23 +23,22 @@ footer {
 }
 
 .container-rodape {
-    display: flex; /* Alinha os blocos lado a lado */
+    display: flex;
     justify-content: space-around;
-    flex-wrap: wrap; /* Quebra a linha em telas menores */
+    flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
-    bottom: 10px;
 }
 
 footer a {
-    color: #00bcd4; /* Cor dos links */
+    color: #00bcd4;
     text-decoration: none;
 }
 
 footer a:hover {
     text-decoration: underline;
-
 }
+
 /* cabeçalho */
 
 .container-headDB {
@@ -55,18 +53,8 @@ footer a:hover {
 
 .boxDB {
     display: flex;
-    width: 100px;
-    height: 50px;
-    background: blue;
+    align-items: center;
     color: white;
-}
-
-.logoDB h3{
-    font-size: 24px;
-}
-
-.titulo {
-    font-size: 28px;
 }
 
 .tituloDB {
@@ -75,106 +63,105 @@ footer a:hover {
     left: 38%;
 }
 
-/* sidebear */
-
+/* sidebars */
 .sidebearDB {
     background: white;
     width: 250px;
     height: 540px;
-    max-height: 550px;
     padding: 20px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-
+    border-radius: 10px;
     display: flex;
-    gap: 20px;
+    flex-direction: column; /* Corrigido para empilhar verticalmente */
 }
 
-.sidebearDB nav a{
+.sidebearDB nav a {
     display: block;
-    padding: 10px 0;
+    padding: 12px 0;
     color: black;
-    text-decoration: none;       
+    text-decoration: none;   
+    border-bottom: 1px solid #eee;
 }
 
-.sidebearDB-Right{
+.sidebearDB nav a:hover {
+    color: #007bff;
+}
+
+.sidebearDB-Right {
     background: white;
     width: 300px;
     height: 540px;
-    max-height: 550px;
     padding: 20px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    
+    border-radius: 10px;
     display: flex;
-    gap: 20px;
+    flex-direction: column; /* Corrigido para centralizar o gráfico */
+    align-items: center;
+    justify-content: center;
 }
 
 /* grafico */
-
-.titulo-calendario {
+.titulo-grafico {
     font-family: sans-serif;
     font-weight: bold;
     color: #333;
     text-align: center;
+    margin-bottom: 15px;
 }
 
 .calendario-grid {
     padding: 10px;
-    border: 2px solid;
+    border: 2px solid rgb(236, 236, 236);
     border-radius: 10px;
-    border-color: rgb(236, 236, 236);
-
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 8px;
 }
 
-.dia{
+.dia {
     font-family: sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 35px;
+    height: 40px;
     background-color: #f0f0f0;
     color: #333;
     border-radius: 6px;
     font-size: 14px;
     cursor: pointer;
+    transition: background 0.2s;
 }
 
-.dia:hover{
+.dia:hover {
     background-color: #007bff;
-    color:white;
+    color: white;
+}
+
+.dia.selecionado {
+    background-color: #007bff !important;
+    color: white !important;
 }
 
 .container-grafico {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
 }
-/* o grafico circular */
+
+/* o grafico circular dinâmico */
 .grafico-circular {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%; /* Faz ficar redondo */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.4s ease; /* Transição suave de cor */
+    transition: background 0.4s ease;
 }
 
-.grafico-circular.completo {
-    background: #28a745;
-}
-
-.grafico-circular.incompleto {
-    /* O conic-gradient faz o desenho estilo pizza: verde de 0% a 50%, vermelho de 50% a 100% */
-    background: conic-gradient(#28a745 0% 50%, #dc3545 50% 100%);
-}
-
-.centro-grafico{
-    width: 100px;
-    height: 100px;
+.centro-grafico {
+    width: 110px;
+    height: 110px;
     background-color: white;
     border-radius: 50%;
     display: flex;
@@ -182,52 +169,40 @@ footer a:hover {
     justify-content: center;
     font-family: sans-serif;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
     color: #333;
 }
 
-.dia.selecionado {
-    background-color: #007bff !important;
-    color: white;
-}
-
-/* main */
-
-.container-centerDB{
+/* main layout */
+.container-centerDB {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 30px;
+    gap: 20px;
     flex: 1;
-    padding: 10px;
+    padding: 20px;
 }
 
-.blocoDB{
+.blocoDB {
     background: white;
-    
     width: 100%;
-    max-width: 900px;
-    padding: 40px 10px;
+    max-width: 700px;
+    padding: 30px 20px;
     border-radius: 20px;
-
     display: flex;
     flex-direction: column;
     gap: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 .cardDB {
     background: white;
-    
-    width: 1000px;
-    max-width: 650px;
+    width: 100%;
     padding: 10px;
-    
-    border: 2px solid;
+    border: 2px solid rgb(236, 236, 236);
     border-radius: 10px;
-    border-color: rgb(236, 236, 236);
-
-    display: flex;
-    gap: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
 }
 
 .main-contentDB {
@@ -235,4 +210,5 @@ footer a:hover {
     flex-direction: column;
     align-items: center;
     gap: 19px;
+    flex: 1;
 }
