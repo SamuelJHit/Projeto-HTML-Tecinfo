@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dashboard</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="dashboard.css">
-    <script src="index.js"></script>
 </head>
 <body class="bodyDB">
     
@@ -14,170 +13,146 @@
             <div class="boxDB">
                 <h3>TecInfo</h3>
             </div>
-
             <h2 class="tituloDB">Painel de Gerenciamento</h2>
-                        
         </header>
-        
     </div>
-        
-    
 
     <div class="container-centerDB">
         
+        <aside class="sidebearDB">
+            <nav>
+                <a href="#">Lista de Clientes</a>
+                <a href="#">Ações de ADM</a>
+                <a href="#">Novo Cliente</a>
+            </nav>
+        </aside>
 
-            <aside class="sidebearDB">
-                <nav>
-                    <a href="#">Lista de Clientes</a>
-                    <a href="#">Ações de ADM</a>
-                    <a href="#">Novo Cliente</a>
-                </nav>
-            </aside>
+        <main class="main-contentDB">
+            <h1 id="mensagem"></h1>
 
-            <main class="main-contentDB">
-
-                    <h1 id="mensagem"></h1>
-
-                <div class="blocoDB">
-                    <p class="cardDB">Calandario</p>
-                    <div class ="calendario-grid">
-                        <div class="dia" data-status="completo">1</div>
-                        <div class="dia" data-status="incompleto">2</div>
-                        <div class="dia" data-status="completo">3</div>
-                        <div class="dia" data-status="incompleto">4</div>
-                        <div class="dia" data-status="incompleto">5</div>
-                        <div class="dia" data-status="completo">6</div>
-                        <div class="dia" data-status="completo">7</div>
-                        <div class="dia" data-status="incompleto">8</div>
-                        <div class="dia" data-status="completo">9</div>
-                        <div class="dia" data-status="incompleto">10</div>
-                        <div class="dia" data-status="completo">11</div>
-                        <div class="dia" data-status="incompleto">12</div>
-                        <div class="dia" data-status="completo">13</div>
-                        <div class="dia" data-status="incompleto">14</div>
-                        <div class="dia" data-status="completo">15</div>
-                        <div class="dia" data-status="completo">16</div>
-                        <div class="dia" data-status="incompleto">17</div>
-                        <div class="dia" data-status="incompleto">18</div>
-                        <div class="dia" data-status="completo">19</div>
-                        <div class="dia" data-status="completo">20</div>
-                        <div class="dia" data-status="incompleto">21</div>
-                        <div class="dia" data-status="completo">22</div>
-                        <div class="dia" data-status="incompleto">23</div>
-                        <div class="dia" data-status="completo">24</div>
-                        <div class="dia" data-status="incompleto">25</div>
-                        <div class="dia" data-status="completo">26</div>
-                        <div class="dia" data-status="incompleto">27</div>
-                        <div class="dia" data-status="completo">28</div>
-                        <div class="dia" data-status="incompleto">29</div>
-                        <div class="dia" data-status="incompleto">30</div>
-
-                    </div>
-                </div>
-
-                <script>
-                    let login = localStorage.getItem("login");
-
-                    document.getElementById("mensagem").innerText = `Dentro da consulta dashboard ${login}`;
-
-                    function atualizarGrafico(){
-                        const dias = document.querySelectorAll('.dia');
-                        const totalDias = dias.length;
-                        let diasCompletos = 0;
-
-                        dias.forEach(dia => {
-                            if(dia.getAttribute('data-status') === 'completo'){
-                                diasCompletos++;
-                                dia.style.borderLeft = "4x solid #28a745";
-                            } else {
-                                dia.style.borderLeft = "4x solid #dc3545"
-                            }
-                        });
-                        const porcentagem = Math.round((diasCompletos / totalDias) * 100);
-                        const grafico = document.getElementById('graficoDashboard');
-                        const centro = document.getElementById('centroGrafico');
-
-                        if (porcentagem === 100) {
-                            grafico.style.background = '#28a745';
-                            centro.innerText = "100%";
-                        } else if (porcentagem === 0){
-                            grafico.style.background = '#dc3545';
-                            centro.innerText = "";
-                        } else {
-                            grafico.style.background = `conic-gradient(#28a745 0% ${porcentagem}%, #dc3545 ${porcentagem}% 100%)`;
-                            centro.innerText = `${porcentagem}%`;
-                        }
-                    }
-
-                    window.onload = atualizarGrafico;
-
-                    document.querySelector('.dia').forEach(dia => {
-                        dia.addEventListener('click', () => {
-                            const statusAtual = dia.getAttribute('data-status');
-                            dia.setAttribute('data-status', statusAtual === 'completo' ? 'incompleto' : 'completo');
-                            atualizarGrafico();
-                        });
-                    });
-                </script>
-
-            </main>
-
-            <div class="sidebearDB-Right">
-                <p>Grafico será aqui dentro</p>
-                <div class="grafico">
-                    <p class="titulo-grafico">Status do Dia</p>
-                    <div id="graficoDashboard" class="graficoI completo">
-                        <div class="centro-grafico">
-                        </div>
-                    </div>
-                </div>
-            </div> 
-    </div>
-
-        <footer>
-            <div class="container-rodape">
-                <div class="bloco-links">
-                    <h3>Links Úteis</h3>
-                    <ul>
-                        <li><a href="#">Sobre Nós</a></li>
-                        <li><a href="#">Contato</a></li>
-                        <li><a href="#">Termos de Serviço</a></li>
-                    </ul>
-                </div>
-                
-                <div class="copyright">
-                    <p>&copy; 2026 Todos os direitos reservados por Samuel J.</p>
+            <div class="blocoDB">
+                <p class="cardDB">Calendário</p>
+                <div class="calendario-grid">
+                    <!-- Dias iniciais com marcações exemplo -->
+                    <div class="dia" data-status="completo">1</div>
+                    <div class="dia" data-status="incompleto">2</div>
+                    <div class="dia" data-status="completo">3</div>
+                    <div class="dia" data-status="incompleto">4</div>
+                    <div class="dia" data-status="incompleto">5</div>
+                    <div class="dia" data-status="completo">6</div>
+                    <div class="dia" data-status="completo">7</div>
+                    <div class="dia" data-status="incompleto">8</div>
+                    <div class="dia" data-status="completo">9</div>
+                    <div class="dia" data-status="incompleto">10</div>
+                    <div class="dia" data-status="completo">11</div>
+                    <div class="dia" data-status="incompleto">12</div>
+                    <div class="dia" data-status="completo">13</div>
+                    <div class="dia" data-status="incompleto">14</div>
+                    <div class="dia" data-status="completo">15</div>
+                    <div class="dia" data-status="completo">16</div>
+                    <div class="dia" data-status="incompleto">17</div>
+                    <div class="dia" data-status="incompleto">18</div>
+                    <div class="dia" data-status="completo">19</div>
+                    <div class="dia" data-status="completo">20</div>
+                    <div class="dia" data-status="incompleto">21</div>
+                    <div class="dia" data-status="completo">22</div>
+                    <div class="dia" data-status="incompleto">23</div>
+                    <div class="dia" data-status="completo">24</div>
+                    <div class="dia" data-status="incompleto">25</div>
+                    <div class="dia" data-status="completo">26</div>
+                    <div class="dia" data-status="incompleto">27</div>
+                    <div class="dia" data-status="completo">28</div>
+                    <div class="dia" data-status="incompleto">29</div>
+                    <div class="dia" data-status="incompleto">30</div>
                 </div>
             </div>
-        </footer>
-</body>
+        </main>
 
-<script>
-    // Seleciona todos os dias e os elementos do gráfico
-    const dias = document.querySelectorAll('.dia');
-    const grafico = document.getElementById('graficoDashboard');
-    const textoStatus = document.getElementById('texto-status');
+        <div class="sidebearDB-Right">
+            <div class="container-grafico">
+                <p class="titulo-grafico">Status do Dia</p>
+                <div id="graficoDashboard" class="grafico-circular">
+                    <div class="centro-grafico" id="centroGrafico">
+                        <!-- Gerado via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
 
-    dias.forEach(dia => {
-        dia.addEventListener('click', () => {
-            // 1. Remove o destaque do dia anterior e adiciona no dia clicado
-            dias.forEach(d => d.classList.remove('selecionado'));
-            dia.classList.add('selecionado');
+    <footer>
+        <div class="container-rodape">
+            <div class="bloco-links">
+                <h3>Links Úteis</h3>
+                <ul>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Termos de Serviço</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Todos os direitos reservados por Samuel J.</p>
+            </div>
+        </div>
+    </footer>
 
-            // 2. Pega o status do dia clicado (completo ou incompleto)
-            const status = dia.getAttribute('data-status');
+    <script>
+        // Carrega o login do localStorage
+        let login = localStorage.getItem("login") || "Usuário";
+        document.getElementById("mensagem").innerText = `Dentro da consulta dashboard ${login}`;
 
-            // 3. Atualiza o gráfico com base no status
-            if (status === 'completo') {
-                grafico.className = 'grafico-circular completo';
-                textoStatus.innerText = '100%';
-                textoStatus.style.color = '#28a745';
+        function atualizarGrafico() {
+            const dias = document.querySelectorAll('.dia');
+            const totalDias = dias.length;
+            let diasCompletos = 0;
+
+            // Altera visualmente os dias de acordo com o status
+            dias.forEach(dia => {
+                if (dia.getAttribute('data-status') === 'completo') {
+                    diasCompletos++;
+                    dia.style.borderBottom = "3px solid #28a745"; // Linha verde embaixo do dia concluído
+                } else {
+                    dia.style.borderBottom = "3px solid #dc3545"; // Linha vermelha embaixo do incompleto
+                }
+            });
+
+            // Cálculo exato de proporção
+            const porcentagem = Math.round((diasCompletos / totalDias) * 100);
+            const grafico = document.getElementById('graficoDashboard');
+            const centro = document.getElementById('centroGrafico');
+
+            if (porcentagem === 100) {
+                grafico.style.background = '#28a745';
+                centro.innerText = "100%";
+            } else if (porcentagem === 0) {
+                // Se for 0% ou nenhuma marcação: Totalmente Vermelho e Sem Descrição de porcentagem
+                grafico.style.background = '#dc3545';
+                centro.innerText = "";
             } else {
-                grafico.className = 'grafico-circular incompleto';
-                textoStatus.innerText = '50%';
-                textoStatus.style.color = '#dc3545';
+                // Gráfico em formato "pizza" que cresce de acordo com o número de marcações
+                grafico.style.background = `conic-gradient(#28a745 0% ${porcentagem}%, #dc3545 ${porcentagem}% 100%)`;
+                centro.innerText = `${porcentagem}%`;
             }
+        }
+
+        // Adiciona evento de clique em TODOS os dias para alternar o status
+        document.querySelectorAll('.dia').forEach(dia => {
+            dia.addEventListener('click', () => {
+                // Remove seleção visual dos outros e adiciona neste
+                document.querySelectorAll('.dia').forEach(d => d.classList.remove('selecionado'));
+                dia.classList.add('selecionado');
+
+                // Alterna o status
+                const statusAtual = dia.getAttribute('data-status');
+                dia.setAttribute('data-status', statusAtual === 'completo' ? 'incompleto' : 'completo');
+                
+                // Recalcula o gráfico instantaneamente
+                atualizarGrafico();
+            });
         });
-    });
-</script>
+
+        // Executa ao carregar a página
+        window.onload = atualizarGrafico;
+    </script>
+</body>
 </html>
