@@ -52,8 +52,9 @@ footer a:hover {
 }
 
 .boxDB {
-    display: flex;
-    align-items: center;
+    width: 100px;
+    height: 50px;
+    background: blue;
     color: white;
 }
 
