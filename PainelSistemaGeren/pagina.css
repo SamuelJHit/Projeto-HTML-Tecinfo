@@ -65,12 +65,7 @@ footer a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.boxDB {
-    width: 100px;
-    height: 50px;
-    background: blue;
-    color: white;
-}
+
 
 .boxP {
     position: relative;
