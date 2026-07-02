@@ -98,7 +98,7 @@
 
     <script>
         // Carrega o login do localStorage
-        let login = localStorage.getItem("login") || "Usuário";
+        let login = localStorage.getItem("login");
         document.getElementById("mensagem").innerText = `Dentro da consulta dashboard ${login}`;
 
         function atualizarGrafico() {
