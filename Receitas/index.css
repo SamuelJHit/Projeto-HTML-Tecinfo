@@ -1,0 +1,41 @@
+/* reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, 'Segoe UI, Roboto, Helvetica Neve', sans-serif;
+}
+
+/* body */
+.body {
+    font-family: Arial, sans-serif;
+    min-width: 10vh;
+    background-color: rgb(244, 245, 247);
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+.container-footer {
+    display: flex; /* Alinha os blocos lado a lado */
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    bottom: 10px;
+}
+
+footer a {
+    color: #f79423;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
