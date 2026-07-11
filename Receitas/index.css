@@ -12,7 +12,7 @@
     text-align: center;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+
     width: 1366px;
     height: 72px;
     padding: 15px 30px;
@@ -22,8 +22,26 @@
     position: relative;
     width: 100px;
     height: 50px;
+
+    left: 4%;
+    bottom: -20%;
     color: #f79423;
     text-align: center;
+}
+
+.posicao-h {
+    z-index: 5;
+    background: none;
+
+    border: none;
+    border-radius: 8px;
+
+    position: absolute;
+
+
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .menu-h {
@@ -49,11 +67,73 @@
 }
 
 /* body */
-.body {
+body {
     font-family: Arial, sans-serif;
     min-width: 10vh;
     background-color: rgb(244, 245, 247);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
+.button-entrar {
+    z-index: 5;
+    color: #f79423;
+    background: none;
+
+    border: none;
+    border-radius: 8px;
+
+    position: absolute;
+    right: 5%;
+
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* main */
+
+main{
+    flex-grow: 1;
+}
+
+.posicao-cardapio{
+    color: #f79423;
+    background: none;
+
+    border: none;
+    border-radius: 5%;
+    position: absolute;
+    
+}
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card-comida{
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* footer */
 
 footer {
     background-color: #222;
