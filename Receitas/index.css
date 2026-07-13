@@ -66,6 +66,8 @@
     border-radius: 4px;
 }
 
+
+
 /* body */
 body {
     font-family: Arial, sans-serif;
@@ -92,20 +94,45 @@ body {
     transition: 0.3s;
 }
 
+.menu-c {
+    position: relative;
+    color: #E8590C;
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+    height: 47px;
+}
+
+.texto-c
+
+
 /* main */
 
 main{
     flex-grow: 1;
+    
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 20px;
 }
 
 .posicao-cardapio{
     color: #f79423;
     background: none;
 
+    padding: 10px 150px;
+
     border: none;
     border-radius: 5%;
-    position: absolute;
+    position: relative;
     
+}
+
+.texto-c {
+    text-align: center;
 }
 
 .grid-produtos {
