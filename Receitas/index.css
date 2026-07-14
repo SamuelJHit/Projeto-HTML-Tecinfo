@@ -13,6 +13,8 @@
     display: flex;
     align-items: center;
 
+    background: #222;
+
     width: 1366px;
     height: 72px;
     padding: 15px 30px;
@@ -81,7 +83,7 @@ body {
 .button-entrar {
     z-index: 5;
     color: #f79423;
-    background: none;
+    background: rgb(248, 203, 55);
 
     border: none;
     border-radius: 8px;
@@ -95,12 +97,15 @@ body {
 }
 
 .menu-c {
+    background: #222;
     position: relative;
     color: #E8590C;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    width: 320px;
-    height: 47px;
+    width: 1265px;
+    height: 72px;
+    padding: 10px 100px;
 }
 
 .texto-c
