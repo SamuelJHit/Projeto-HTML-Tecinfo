@@ -15,7 +15,8 @@
 
     background: #222;
 
-    width: 1366px;
+    width: 100%;
+    max-width: 1366px;
     height: 72px;
     padding: 15px 30px;
 }
@@ -98,14 +99,14 @@ body {
 
 .menu-c {
     background: #222;
-    position: relative;
     color: #E8590C;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 1265px;
+    width: 100%;
+    max-width: 1366px;
     height: 72px;
-    padding: 10px 100px;
+    padding: 15px 200px;
 }
 
 .texto-c
@@ -121,8 +122,23 @@ main{
 .layout {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    padding: 20px;
 }
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .4;
+}
+
+
 
 .posicao-cardapio{
     color: #f79423;
