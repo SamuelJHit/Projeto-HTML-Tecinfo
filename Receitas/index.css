@@ -81,6 +81,15 @@ body {
     min-height: 100vh;
 }
 
+.button-cardapio {
+    z-index: 5;
+    position: absolute;
+    cursor: pointer;
+
+    right: 14%;
+    transition: 0.3s;
+}
+
 .button-entrar {
     z-index: 5;
     color: #f79423;
