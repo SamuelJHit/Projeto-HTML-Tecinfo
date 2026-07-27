@@ -85,8 +85,9 @@ body {
     z-index: 5;
     position: absolute;
     cursor: pointer;
-
-    right: 14%;
+    color: #E8590C;
+    left: 13%;
+    top: 16%;
     transition: 0.3s;
 }
 
