@@ -27,7 +27,7 @@
     width: 100px;
     height: 50px;
 
-    left: 4%;
+    left: 6.9%;
     bottom: -20%;
     color: #f79423;
     text-align: center;
@@ -51,6 +51,7 @@
     background: none;
     border: none;
     cursor: pointer;
+    padding: 0;
 
     width: 30px;
     height: 24px;
@@ -77,6 +78,32 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+.button-cardapio {
+    z-index: 5;
+    position: absolute;
+    cursor: pointer;
+    color: #E8590C;
+    left: 13%;
+    top: 16%;
+    transition: 0.3s;
+}
+
+.button-entrar {
+    z-index: 5;
+    color: #f79423;
+    background: rgb(248, 203, 55);
+
+    border: none;
+    border-radius: 8px;
+
+    position: absolute;
+    right: 5%;
+
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 /* main */
